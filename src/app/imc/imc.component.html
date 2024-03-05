@@ -1,1 +1,23 @@
-<p>imc works!</p>
+<form class="container mt-5 bg-light border rounded p-4" style="max-width: 650px;">
+    <div class="row mb-3">
+        <div class="col">
+            <label for="peso" class="form-label">Peso (kg)</label>
+            <input type="number" class="form-control border-0 rounded-0 text-right" [(ngModel)]="peso" name="peso" id="peso" placeholder="0">
+        </div>
+        <div class="col">
+            <label for="altura" class="form-label">Altura (m)</label>
+            <input type="number" class="form-control border-0 rounded-0 text-right" [(ngModel)]="altura" name="altura" id="altura" placeholder="0">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary me-2" (click)="calc()">Calcular</button>
+            <span *ngIf="resultado > 0" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <p class="h3">Resultado: {{ resultado }}</p>
+        </div>
+    </div>
+</form>
