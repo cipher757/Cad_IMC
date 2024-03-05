@@ -1,18 +1,28 @@
 <form class="container mt-5 bg-light border rounded p-4" style="max-width: 650px;">
     <div class="row mb-3">
         <div class="col">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" [(ngModel)]="nome" name="nome" id="nome" placeholder="Nome">
+        </div>
+        <div class="col">
+            <label for="idade" class="form-label">Idade</label>
+            <input type="number" class="form-control" [(ngModel)]="idade" name="idade" id="idade" placeholder="Idade">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
             <label for="peso" class="form-label">Peso (kg)</label>
-            <input type="number" class="form-control border-0 rounded-0 text-right" [(ngModel)]="peso" name="peso" id="peso" placeholder="0">
+            <input type="number" class="form-control" [(ngModel)]="peso" name="peso" id="peso" placeholder="0">
         </div>
         <div class="col">
             <label for="altura" class="form-label">Altura (m)</label>
-            <input type="number" class="form-control border-0 rounded-0 text-right" [(ngModel)]="altura" name="altura" id="altura" placeholder="0">
+            <input type="number" class="form-control" [(ngModel)]="altura" name="altura" id="altura" placeholder="0">
         </div>
     </div>
     <div class="row">
         <div class="col">
             <button class="btn btn-primary me-2" (click)="calc()">Calcular</button>
-            <span *ngIf="resultado > 0" class="text-danger"></span>
+            <span *ngIf="resultado < 0" class="text-danger">Por favor, insira valores válidos para peso e altura.</span>
         </div>
     </div>
     <div class="row mt-3">

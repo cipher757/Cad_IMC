@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Cad_Alu';
+  version = '2.5.0';
 }

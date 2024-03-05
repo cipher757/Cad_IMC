@@ -6,10 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './imc.component.css'
 })
 export class ImcComponent {
-  peso: number = 0;
-  altura: number = 0;
-  resultado: number = 0;
-  faixa: string = "";
+    nome: string = "";
+    idade: number = 0;
+    peso: number = 0;
+    altura: number = 0;
+    resultado: number = 0;
+    faixa: string = "";
 
     calc() {
         //se o peso e a altura são valores válidos (maiores que zero)
@@ -18,7 +20,7 @@ export class ImcComponent {
             return;
         }
 
-        //calculo imc
+        //calculo IMC
         this.resultado = this.peso / (this.altura * this.altura);
 
         //faixa de IMC
@@ -36,7 +38,7 @@ export class ImcComponent {
         this.resultado = this.roundToTwoDecimalPlaces(this.resultado);
     }
 
-    //arredonda um número para duas casas decimais
+    //arredonda o número para duas casas decimais
     roundToTwoDecimalPlaces(value: number): number {
         return Math.round(value * 100) / 100;
     }
