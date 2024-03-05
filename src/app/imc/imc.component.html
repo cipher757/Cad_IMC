@@ -29,6 +29,12 @@
         <div class="col">
             <p class="h3">Resultado: {{ resultado }}</p>
             <p *ngIf="faixa" class="text-muted">Faixa de IMC: {{ faixa }}</p>
+            <span *ngIf="faixa === 'Abaixo do peso'"><i class="bi bi-exclamation-triangle-fill text-warning"></i></span>
+            <span *ngIf="faixa === 'Peso normal'"><i class="bi bi-check-circle-fill text-success"></i></span>
+            <span *ngIf="faixa === 'Sobrepeso'"><i class="bi bi-exclamation-triangle-fill text-warning"></i></span>
+            <span *ngIf="faixa === 'Obesidade'"><i class="bi bi-exclamation-triangle-fill text-danger"></i></span>
         </div>
     </div>
 </form>
+
+
