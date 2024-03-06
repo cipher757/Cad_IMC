@@ -6,7 +6,7 @@
         </div>
         <div class="col">
             <label for="idade" class="form-label">Idade</label>
-            <input type="number" class="form-control" [(ngModel)]="idade" name="idade" id="idade" placeholder="Idade">
+            <input type="number" class="form-control" [(ngModel)]="idade" name="idade" id="idade" placeholder="0">
         </div>
     </div>
     <div class="row mb-3">
@@ -29,10 +29,11 @@
         <div class="col">
             <p class="h3">Resultado: {{ resultado }}</p>
             <p *ngIf="faixa" class="text-muted">Faixa de IMC: {{ faixa }}</p>
-            <span *ngIf="faixa === 'Abaixo do peso'"><i class="bi bi-exclamation-triangle-fill text-warning"></i></span>
-            <span *ngIf="faixa === 'Peso normal'"><i class="bi bi-check-circle-fill text-success"></i></span>
-            <span *ngIf="faixa === 'Sobrepeso'"><i class="bi bi-exclamation-triangle-fill text-warning"></i></span>
-            <span *ngIf="faixa === 'Obesidade'"><i class="bi bi-exclamation-triangle-fill text-danger"></i></span>
+            <span *ngIf="faixa === 'Abaixo do peso'"><img src="assets/img/abaixoPeso.png"></span>
+            <span *ngIf="faixa === 'Peso normal'"><img src="assets/img/normal.png"></span>
+            <span *ngIf="faixa === 'Sobrepeso'"><img src="assets/img/acimaPeso.png"></span>
+            <span *ngIf="faixa === 'Obesidade'"><img src="assets/img/obesidade.png"></span>
+            <span *ngIf="faixa === 'Obesidade Grave'"><img src="assets/img/obesidadeGrave.png"></span>
         </div>
     </div>
 </form>

@@ -30,8 +30,11 @@ export class ImcComponent {
             this.faixa = "Peso normal";
         } else if (this.resultado >= 25 && this.resultado < 30) {
             this.faixa = "Sobrepeso";
-        } else {
+        } else if (this.resultado >=30 && this.resultado < 40) {
             this.faixa = "Obesidade";
+        }
+        else {
+          this.faixa = "Obesidade Grave"
         }
 
         //arredonda o resultado para duas casas decimais
